@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "GeneXus",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#functions"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.genexus",
+          "match": "(?i)\\b(new|var|if|do|function|exit|java|return|endnew|endcase|pl|print|while|switch|header|end|for|else|foreach|in|continue|endif|where|break|defined|by|each|commit|case|when|enddo|none|endfor|otherwise|for each)\\b"
+        },
+        {
+          "name": "keyword.other.genexus",
+          "match": "(?i)\\b(start|event|sub|endsub|endevent)\\b"
+        },
+        {
+          "name": "keyword.other.special.genexus",
+          "match": "(?i)\\b(submit|call|link|parm|printer|default)\\b"
+        },
+        {
+          "name": "keyword.other.rules.genexus",
+          "match": "(?i)\\b(define|same)\\b"
+        }
+      ]
+    },
+	"call-programs": {
+      "patterns": [
+        {
+          "match": "(?i)\\b(call)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+          "captures": {
+            "1": {
+              "name": "keyword.other.special.genexus"
+            },
+            "2": {
+              "name": "entity.name.function.genexus"
+            }
+          }
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.genexus",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.genexus",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.genexus",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.genexus",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.genexus",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.genexus",
+          "begin": "/\\*",
+          "end": "\\*/",
+          "patterns": [
+            {
+              "name": "comment.block.genexus",
+              "match": "."
+            }
+          ]
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.genexus",
+          "match": "&[a-zA-Z_][a-zA-Z0-9_]*"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.genexus",
+          "match": "(?i)\\b(GetLocation|Space|AddMth|int|null|GetSoapErr|Str|Addyr|GetSoapErrMsg|StrReplace|Age|GXGetMli|StrSearch|Ask|GXMlines|StrSearchRev|BrowserId|Hour|SubStr|BrowserVersion|Int|Sysdate|Cdow|IsNull|Systime|Cmonth|Len|Tadd|Color|Loadbitmap|Tdiff|Cols|Lower|Time|Concat|Ltrim|ToFormattedString|Confirmed|Minute|Today|Ctod|Month|Trim|CtoT|NewLine|Trunc|Cursor|Now|TtoC|Decrypt64|NullValue|Udf|DeleteFile|Null|Udp|Day|Random|Upper|Dow|RGB|UserId|Dtoc|ReadRegKey|Usercls|Encrypt64|Round|Val|Eom|Rows|WriteRegKey|FileExist|Rseed|Wrkst|Format|Rtrim|Year|GetCookie|Second|YmdHmstoT|GetDataStore|SetCookie|Ymdtod|GetEncryptionKey|Sleep)\\b"
+        }
+      ]
+    }
+  },
+
+  "scopeName": "source.genexus"
+}

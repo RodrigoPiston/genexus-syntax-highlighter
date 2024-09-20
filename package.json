@@ -1,0 +1,32 @@
+{
+  "name": "genexus-syntax-highlighter",
+  "displayName": "genexus-syntax-highlighter",
+  "description": "GeneXus syntax highlighting for VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "genexus",
+      "aliases": ["GeneXus", "genexus"],
+      "extensions": [".gx"],
+      "configuration": "./language-configuration.json"
+    }],
+    "themes": [
+      {
+        "label": "GeneXus",
+        "uiTheme": "vs",
+        "path": "./themes/genexus-color-theme.json"
+      }
+    ],
+    "grammars": [{
+      "language": "genexus",
+      "scopeName": "source.genexus",
+      "path": "./syntaxes/genexus.tmLanguage.json"
+    }]
+  }
+}
