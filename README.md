@@ -1,7 +1,3 @@
-Aquí tienes un ejemplo de un archivo `README.md` adecuado para tu extensión de resaltado de sintaxis de GeneXus, con detalles sobre las versiones compatibles y una guía de uso:
-
----
-
 # GeneXus Syntax Highlighter
 
 **GeneXus Syntax Highlighter** is a Visual Studio Code extension that provides syntax highlighting support for **GeneXus versions 7.5, 8.0, and 9.0**. This extension helps developers working with GeneXus by offering accurate syntax coloring for code, variables, rules, and other elements commonly found in GeneXus projects.
