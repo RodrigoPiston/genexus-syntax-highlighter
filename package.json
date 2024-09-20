@@ -3,7 +3,7 @@
   "displayName": "GeneXus Syntax Highlighter",
   "description": "GeneXus 8.0 and 9.0 syntax highlighting for VS Code",
   "publisher": "RodrigoPiston",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": "https://github.com/RodrigoPiston/genexus-syntax-highlighter.git",
   "engines": {
     "vscode": "^1.93.0"
